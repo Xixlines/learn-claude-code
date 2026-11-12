@@ -92,6 +92,7 @@ def agent_loop(messages: list):
         )
 
         # Append assistant turn
+        print("=== 当前消息数:", len(messages))   # 看每轮历史怎么变长
         messages.append({"role": "assistant", "content": response.content})
 
         # If the model didn't call a tool, we're done
